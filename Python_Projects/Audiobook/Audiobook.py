@@ -7,8 +7,10 @@ Reader = pyttsx3.init()
 Reader.say("Hello World")
 Reader.runAndWait()
 #Step4 - Download the PDF file and search it here.
-
+#Already downloaded the pdf.
 #Step5 - Install PyPDF2
+#Already downloaded PyPDF2.
 #Step6 - Try to read one of the page
+
 #Step7 - Change the voice
 #Step8 - Use for loop to read the whole book.
