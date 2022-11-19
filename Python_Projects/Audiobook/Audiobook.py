@@ -1,11 +1,20 @@
 import pyttsx3
+import  PyPDF2
+Book = open("Fundamentals Of Python Programming.pdf", 'rb')
+PdfReader = PyPDF2.PdfFileReader(Book)
+Pages = PdfReader.numPages
+print(Pages)
 #This program is for the audiobook for the pdf. It will read the content.
 #Step1 - Install the speech library. Terminal - pip install pyttsx3
 #Step2 - Initialize. here.
 Reader = pyttsx3.init()
-#Step3 - Test  speak.
-Reader.say("Hello World")
+Page = PdfReader.getPage(12)
+Text = Page.extractText()
+Reader.say(Text)
 Reader.runAndWait()
+#Step3 - Test  speak.
+#Reader.say("Hello World")
+#Reader.runAndWait()
 #Step4 - Download the PDF file and search it here.
 #Already downloaded the pdf.
 #Step5 - Install PyPDF2
