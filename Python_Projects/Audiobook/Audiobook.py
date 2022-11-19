@@ -42,3 +42,5 @@ for i in range(Start,Pages):
     Text = Page.extractText()
     Reader.say(Text)
     Reader.runAndWait()
+
+#Inspired by - https://www.youtube.com/watch?v=kyZ_5cvrXJI
