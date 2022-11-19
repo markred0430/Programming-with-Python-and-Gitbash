@@ -10,11 +10,11 @@ print(Pages)
 Reader = pyttsx3.init()
 Page = PdfReader.getPage(12)
 Text = Page.extractText()
+voices = Reader.getProperty('voices')
+Reader.setProperty('voice',voices[1].id)
 Reader.say(Text)
 Reader.runAndWait()
 #Step3 - Test  speak.
-#Reader.say("Hello World")
-#Reader.runAndWait()
 #Step4 - Download the PDF file and search it here.
 #Already downloaded the pdf.
 #Step5 - Install PyPDF2
